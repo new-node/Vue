@@ -1,0 +1,227 @@
+@import "./reset.scss";
+$browser-default-font-size: 16px !default;
+html {
+  font-size: $browser-default-font-size;
+}
+@function pxTorem($px){
+  @return $px / $browser-default-font-size * 1rem;
+}
+@mixin  rounded-corners{
+  -moz-border-radius: pxTorem(5px) pxTorem(5px) pxTorem(5px) pxTorem(5px);
+  -webkit-border-radius: pxTorem(5px) pxTorem(5px) pxTorem(5px) pxTorem(5px);
+  border-radius:pxTorem(5px) pxTorem(5px) pxTorem(5px) pxTorem(5px);
+}
+@mixin  rounded-corner{
+  -moz-border-radius: pxTorem(10px) pxTorem(10px) pxTorem(10px) pxTorem(10px);
+  -webkit-border-radius: pxTorem(10px) pxTorem(10px) pxTorem(10px) pxTorem(10px);
+  border-radius:pxTorem(7.5px) pxTorem(7.5px) pxTorem(7.5px) pxTorem(7.5px);
+}
+
+.head{
+  width: 100%;
+  text-align: center;
+  margin-top: pxTorem(5px);
+}
+.content{
+  width: 90%;
+  height: pxTorem(100px);
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  @include rounded-corners;
+  .content-head{
+    width: 100%;
+    height: pxTorem(40px);
+    line-height: pxTorem(40px);
+    padding-left: pxTorem(10px);
+    background-color: #F0F0F0;
+    box-sizing: border-box;
+    @include rounded-corners;
+  }
+  .ctn {
+      width: 100%;
+      height: pxTorem(60px);
+      padding-left: pxTorem(10px);
+      ul li{
+        float: left;
+        a {
+          display: block;
+          padding: pxTorem(10px) pxTorem(15px);
+          background-color: #3399F3;
+          color: #FFFFFF;
+          outline: none;
+          font-size: pxTorem(14px);
+          font-weight: 700;
+          margin:  pxTorem(12px) pxTorem(8px);
+          text-align: center;
+          @include rounded-corners;
+        }
+    }
+
+  }
+}
+
+/*维修页面*/
+.repairHead{
+  width: 100%;
+  height: pxTorem(50px);
+  background-color: #037DA4;
+  text-align: center;
+}
+
+.elementType{
+  width: 100%;
+  height: pxTorem(33px);
+  overflow-x: scroll;
+  ul{
+    width: 200%;
+    height: pxTorem(33px);
+    box-sizing: border-box;
+    li{
+      float: left;
+      color: #000;
+      padding: pxTorem(7.5px) pxTorem(10px);
+      margin: pxTorem(2px) pxTorem(10px);
+    }
+  }
+}
+.repairCtn{
+  width: 98%;
+  min-height: pxTorem(100px);
+  box-sizing: border-box;
+  background: #FFFFFF;
+  margin: pxTorem(5px) auto;
+}
+.ctnHead{
+  width: 100%;
+  height: pxTorem(40px);
+  text-align: center;
+  background-color: #EEEEEE;
+  thead tr{
+    width: 100%;
+    height: pxTorem(40px);
+    line-height: pxTorem(40px);
+    td{
+      color: red;
+    }
+  }
+  .ctn {
+      margin: pxTorem(5px) pxTorem(5px) pxTorem(5px) pxTorem(5px);
+      span{
+        display: inline-block;
+        width: pxTorem(15px);
+        height: pxTorem(15px);
+        text-align: center;
+        margin-right: pxTorem(5px);
+        @include rounded-corner;
+        border:pxTorem(1px) solid #EEEEEE;
+        line-height: pxTorem(15px);
+       }
+  }
+}
+.btn-login{
+  position: fixed;
+  bottom: pxTorem(2px);
+  left: 0;
+  width: 100%;
+  height: pxTorem(40px);
+  text-align: center;
+  line-height: pxTorem(30px);
+  background: #73A839;
+  @include rounded-corners;
+  a{
+    display: block;
+    font-weight: 700;
+    padding: pxTorem(5px) pxTorem(10px);
+    color: #FFFFFF;
+  }
+}
+/*登录页面样式*/
+.divImg{
+  width: 100%;
+  height: pxTorem(60px);
+  margin: pxTorem(15px) 0;
+  text-align: center;
+  img{
+    height: pxTorem(60px);
+  }
+}
+.ctnImg{
+  width:pxTorem(130px);
+  height: pxTorem(130px);
+  margin:  0 auto;
+  img{
+    width:pxTorem(130px);
+  }
+}
+.ctnLogin{
+  width: 80%;
+  margin: pxTorem(40px) auto  pxTorem(5px) ;
+  text-align: center;
+  .userName{
+    width: 80%;
+    height: pxTorem(30px);
+    outline: none;
+    border: none;
+    margin: pxTorem(5px) 0 pxTorem(5px);
+    padding-left: pxTorem(3px);
+    @include rounded-corners;
+  }
+  .password{
+    width: 80%;
+    height: pxTorem(30px);
+    outline: none;
+    border: none;
+    margin: pxTorem(5px) 0 pxTorem(5px);
+    padding-left: pxTorem(3px);
+    @include rounded-corners;
+  }
+  .btnMsg{
+    width: 80%;
+    height: pxTorem(30px);
+    margin: pxTorem(5px) 0 pxTorem(5px);
+    padding-left: pxTorem(3px);
+    color: #000;
+    outline: none;
+    border: none;
+    @include rounded-corner;
+  }
+  .register{
+    float: right;
+    width: 40%;
+    height: pxTorem(30px);
+    background: #0091C0;
+    color: #A59999;
+    outline: none;
+    border: none;
+  }
+}
+.register-wrap{
+  width: 80%;
+  height: pxTorem(300px);
+  text-align: center;
+  margin: pxTorem(30px) auto;
+  h3{
+    color: #000000;
+  }
+  .userName, .password{
+    width: 80%;
+    height: pxTorem(35px);
+    margin: pxTorem(10px) 0 ;
+    border: none;
+    outline: none;
+    @include rounded-corners;
+  }
+  .btnMsg{
+    width: 80%;
+    height: pxTorem(35px);
+    background-color: #EEEEEE;
+    margin: pxTorem(10px) 0 ;
+    border: none;
+    outline: none;
+    @include rounded-corners;
+  }
+  span{
+    display: block;
+    float: right;
+  }
+}

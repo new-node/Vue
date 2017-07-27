@@ -1,0 +1,131 @@
+@import "./reset.scss";
+$browser-default-font-size: 16px !default;
+html {
+  font-size: $browser-default-font-size;
+}
+@function pxTorem($px){
+  @return $px / $browser-default-font-size * 1rem;
+}
+@mixin  rounded-corners{
+  -moz-border-radius: pxTorem(5px) pxTorem(5px) pxTorem(5px) pxTorem(5px);
+  -webkit-border-radius: pxTorem(5px) pxTorem(5px) pxTorem(5px) pxTorem(5px);
+  border-radius:pxTorem(5px) pxTorem(5px) pxTorem(5px) pxTorem(5px);
+}
+@mixin  rounded-corner{
+  -moz-border-radius: pxTorem(10px) pxTorem(10px) pxTorem(10px) pxTorem(10px);
+  -webkit-border-radius: pxTorem(10px) pxTorem(10px) pxTorem(10px) pxTorem(10px);
+  border-radius:pxTorem(7.5px) pxTorem(7.5px) pxTorem(7.5px) pxTorem(7.5px);
+}
+.head{
+  width: 100%;
+  height: pxTorem(50px);
+  text-align: center;
+  margin-bottom: pxTorem(30px);
+  img{
+    height: pxTorem(50px);
+  }
+}
+.registerRegion{
+  width: 75%;
+  height: pxTorem(200px);
+  margin: pxTorem(5px) auto;
+  text-align: center;
+  .tel, .psd, .againPsd, .uerName{
+    width: 80%;
+    height: pxTorem(35px);
+    margin: pxTorem(10px) 0 ;
+    border: none;
+    outline: none;
+    @include rounded-corners;
+  }
+}
+
+.btnRegister{
+  width: 100%;
+  height: pxTorem(40px);
+  text-align: center;
+  margin-top: pxTorem(40px);
+  .btn{
+    width: 60%;
+    height: pxTorem(35px);
+    border: none;
+    color: #000000;
+    background: #FFFFFF;
+    @include rounded-corner;
+  }
+}/* 登录后的页面*/
+.contains{
+  padding-top: pxTorem(5px);
+  .imgPic{
+    width: pxTorem(30px);
+    height: pxTorem(30px);
+    float: right;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .slide-fade-enter-active {
+    transition: all .8s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .slide-fade-enter, .slide-fade-leave-to
+    /* .slide-fade-leave-active for below version 2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  .loginUserName{
+    width: pxTorem(150px);
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color:#acacac;
+    z-index: 1;
+    h3{
+      width: 70%;
+      height: pxTorem(20px);
+      font-size: pxTorem(14px);
+      margin-right: pxTorem(10px);
+      color: #0e0e0e;
+      display: inline-block;
+    }
+    a{
+      font-size: pxTorem(14px);
+      margin-right: pxTorem(5px);
+    }
+    span.btnClose img{
+      width: pxTorem(20px);
+      height: pxTorem(20px);
+      float: right;
+      margin: pxTorem(5px) pxTorem(5px) 0 0;
+    }
+
+  }
+  .regionFirst{
+    width: 100%;
+    height: pxTorem(50px);
+    text-align: center;
+    margin-top: pxTorem(20px);
+    img{
+      height: 100%;
+    }
+  }
+  .siteRegion{
+    width: 100%;
+    height: pxTorem(25px);
+    line-height: pxTorem(25px);
+    margin-top: pxTorem(20px);
+    span{
+      display: inline-block;
+      vertical-align: middle;
+      margin: pxTorem(1px) pxTorem(5px) 0 pxTorem(20px)
+    }
+    .cityName{
+      width: pxTorem(90px);
+      height: pxTorem(30px);
+    }
+  }
+}
